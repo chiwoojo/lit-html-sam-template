@@ -1,6 +1,7 @@
 // SAM is a async and state management pattern created by Jean-Jacques Dubray
 // http://sam.js.org/
 import {html, render} from 'lit-html';
+import lodash from 'lodash';
 
 var model = {
   // default values
@@ -22,7 +23,7 @@ var present = function(proposal) {
 };
 var state = function() {
   if (model.x) {
-    render(html`<div>Tesla ${model.x}</div>`, document.body);
+    render(html`<div class="sam">Tesla ${model.x}</div>`, document.body);
   }
 
   nap();
